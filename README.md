@@ -14,7 +14,9 @@ The discussion that gives an overview as how this came to be can be found [here]
 This is an attempt to integrate `DenseDeepGCN` into the `torchdistill` framework and then further modify it with injected bottlenecks for the purpose of split computing. To this end, the `sc2-benchmark` repository has been cloned and modified, adding `deep_gcns_torch` and utilizing features from the `torchdistill` framework.
 ### State of the project (Issues, primarily)
 You can run the evaluation and the training of a DenseDeepGCN. 
+
 The **IoU calculation** is poorly implemented (on my part) due to how the implementations differ from `dense_gcn` and `torchdstill`. I need to implement it better taking into account the differences.
+
 **Terminal command options** may cause issues as there are two argument parsers. To fix this I will most likely modify the way `OptInit()` works in `DenseDeepGCN` and make `DenseDeepGCN` work with parameters fit for `torchdistill` (it's tidy and makes use of the framework).
 
 ## Environment
