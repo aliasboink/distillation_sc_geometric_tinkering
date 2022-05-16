@@ -4,5 +4,6 @@ __pycache__/
 .editorconfig
 .github
 .vscode
+.log
 
 datasets
