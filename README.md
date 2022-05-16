@@ -14,11 +14,14 @@ This is an attempt to integrate `DenseDeepGCN` into the `torchdistill` framework
 
 ## Environment
 **NOT WORKING YET!!!!!!!!!!!!!!!!**
+
 To create the environment run:
 ```
 conda create --name torch_distill_gcn --file torchdistill_deep_gcn.txt
 ```
+
 **READ THIS INSTEAD!!!**
+
 For the creation of the environment I've used the `environment.yaml` file found in `sc2-benchmark` then updating everything `torch` related. 
 Then I've installed `torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric` based on my `CUDA` version.
 
