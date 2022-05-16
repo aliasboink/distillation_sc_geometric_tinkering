@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["--config", "/home/gleip/Documents/Thesis_Testing/Matsubara/sc2-benchmark-main/script/task/new_config/deepgcn.yaml"]
+        },
+
+        {
+            "name": "Python: VOC Test",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["-student_only","--config", "configs/pascal_voc2012/supervised_compression/entropic_student/deeplabv3_splittable_resnet50-fp-beta2.56_from_deeplabv3_resnet50.yaml"]
+        },
+
+        {
+            "name": "Python: DeepGCN Pretrained Test",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["-test_only","-student_only","--config", "/home/gleip/Documents/Thesis_Testing/Matsubara/sc2-benchmark-main/script/task/new_config/deepgcn.yaml"]
+        },
+
+    ]
+}
