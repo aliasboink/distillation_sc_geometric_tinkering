@@ -9,7 +9,7 @@ This is an attempt at a combination of the following repositories:
 
 The discussion that gives an overview as how this came to be can be found [here](https://github.com/yoshitomo-matsubara/torchdistill/discussions/225).
 
-## Brief description
+## Description
 This is an attempt to integrate `DenseDeepGCN` into the `torchdistill` framework and then further modify it with injected bottlenecks for the purpose of split computing. To this end, the `sc2-benchmark` repository has been cloned and modified, adding `deep_gcns_torch` and utilizing features from the `torchdistill` framework.
 
 ## Environment
