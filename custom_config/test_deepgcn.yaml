@@ -31,7 +31,7 @@ models:
     ckpt: !join ['custom_models/sem_seg_dense-res-edge-28-64_02.pth']
 
 train:
-  log_freq: 1
+  log_freq: 100
   num_epochs: 20
   train_data_loader:
     dataset_id: *root_dir
@@ -42,7 +42,6 @@ train:
     dataset_wrapper:
         name: 'GeometricWrapper'
         params: {}
-    #collate_fn: collate_fn
   val_data_loader:
     dataset_id: *root_dir
     random_sample: False
@@ -51,7 +50,6 @@ train:
     dataset_wrapper:
         name: 'GeometricWrapper'
         params: {}
-    #collate_fn: collate_fn
   teacher:
     sequential: []
     wrapper: 'DistributedDataParallel'
@@ -68,13 +66,11 @@ train:
   optimizer:
     type: 'Adam'
     params:
-      lr: 0.0001
-      #momentum: 0.9
-      #weight_decay: 0.0005
+      lr: 0.001
   scheduler:
     type: 'MultiStepLR'
     params:
-      milestones: [5, 15]
+      milestones: [30, 35]
       gamma: 0.1
   criterion:
     type: 'GeneralizedCustomLoss'
@@ -95,4 +91,3 @@ test:
     dataset_wrapper:
         name: 'GeometricWrapper'
         params: {}
-    #collate_fn: collate_fn
