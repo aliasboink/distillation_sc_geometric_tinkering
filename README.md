@@ -34,7 +34,7 @@ Then I've installed `torch-scatter torch-sparse torch-cluster torch-spline-conv 
 
 ## Testing
 
-After you have downloaded the `S3DIS` dataset and added it to a **datasets** folder in the preferred location, you can run:
+After you have downloaded the `S3DIS` dataset and added it to a **datasets** folder in the preferred location, you can run (possibly, first instance of this was actually an incorrect copy-paste):
 ```
-python test.py --pretrained_model /home/gleip/Desktop/models/sem_seg_dense-res-edge-28-64-ckpt_best_model.pth  --batch_size 1  --data_dir /home/gleip/Desktop/deepgcn/S3DIS
+python script/task/semantic_segmentation_geometric.py --config custom_config/test_deepgcn.yaml 
 ```
